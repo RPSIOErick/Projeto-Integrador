@@ -30,6 +30,11 @@
         </script>
     <!--Fim da Importação IonIcons-->
 
+    <!--CSSs-->
+        <link rel="stylesheet" href="../public/css/global.css">
+        <link rel="stylesheet" href="../public/css/createAluno.css">
+    <!--Fim dos CSSs-->
+
 </head>
 <body>
     <!--Navbar-->
@@ -74,24 +79,26 @@
     <!--Fim do Botão Voltar-->   
 
     <!--Titulo Principal-->
-        <h1>Criar Aluno(s)</h1>
+        <h1 class="page-title">Criar Aluno(s)</h1>
 
     <!--Menu Multiform-->
         <div class="multiform">
 
             <!--Botão Importar Arquivo-->
                 <div class="multiform-btn multiform-active">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                    <p>Importar Arquivo</p>
+                        <ion-icon name="document-text-outline" class="multiform-icon"></ion-icon>
+                        <p>Importar Arquivo</p>
                 </div>
             <!--Fim do Botão Importar Arquivo-->
 
             <!--Botão Cadastrar Manualmente-->
                 <div class="multiform-btn multiform-disable">
-                    <ion-icon name="person-add-outline"></ion-icon>
+                    <ion-icon name="person-add-outline" class="multiform-icon"></ion-icon>
                     <p>Cadastrar Manualmente</p>
                 </div>
             <!--Fim do Botão Cadastrar Manualmente-->
+
+            
 
         </div>
     <!--Fim do Menu Multiform-->
@@ -99,24 +106,35 @@
     <!--Div Importar Arquivo-->
         <div class="cadastrar-importar">
             <!--Titulo-->
-                <h2>Importar Arquivo</h2>
+                <h2 class="title-createAluno">Importar Arquivo</h2>
 
             <!--Explicação-->
-                <p>
+                <p class="explicacao-importacao">
                     Importe um arquivo .csv com o nome 
-                    de todos os alunos da turma, saiba 
-                    como gerar uma lista de alunos 
-                    pelo sistema SIGA
+                    de todos os alunos da turma,
+                    <a href="">
+                        saiba 
+                        como gerar uma lista de alunos 
+                        pelo sistema SIGA
+                    </a>
                 </p>
+ 
+               
             
             <!--Formulario Importação CSV-->
                 <form action="">
 
                     <div>
-                        <input type="file" name="" id="">
+                        <label for="file_aluno" class="file_aluno-design">
+                            <ion-icon name="add-outline" class="file_aluno-icon"></ion-icon>
+                        </label>
+                        <input type="file" name="file_aluno" id="file_aluno">
                     </div>
                     
-                    <button type="submit">Enviar</button>
+                    <div class="btn-final">
+                        <button type="submit" class="btn-black">Enviar</button>
+                    </div>
+
 
                 </form>
             <!--Fim do Formulario Importação CSV-->
@@ -127,40 +145,50 @@
     <!--Div Cadastrar Manualmente-->
         <div class="cadastrar-manual" style="display: none;">
             <!--Titulo-->
-                <h2>Cadastrar Aluno Manualmente</h2>
+                <h2 class="title-createAluno">Cadastrar Aluno Manualmente</h2>
 
-            <!--Fomulario Cadastro de Alunos--> 
-                <form action="">
+                <!--Fomulario Cadastro de Alunos--> 
+                    <form action="">
 
-                    <!--RA-->
-                        <div>
-                            <label for="ra_aluno">RA:</label>
-                            <input type="text" id="ra_aluno">
+                        <!--Div Formulario-->
+                            <div class="div-form-createAluno">
+                            
+                                <!--RA-->
+                                    <div class="input-createAluno">
+                                        <label for="ra_aluno">RA:</label>
+                                        <input type="text" id="ra_aluno" placeholder="RA">
+                                    </div>
+
+                                <!--Nome Completo-->   
+                                    <div class="input-createAluno">
+                                        <label for="nome_aluno">Nome Completo:</label>
+                                        <input type="name" id="nome_aluno" placeholder="Nome Completo">
+                                    </div>
+
+                                <!--Email-->
+                                    <div class="input-createAluno">
+                                        <label for="email_aluno">Email:</label>
+                                        <input type="email" id="email_aluno" placeholder="Email">
+                                    </div>
+
+                                <!--Senha-->
+                                    <div class="input-createAluno">
+                                        <label for="senha_aluno">Senha:</label>
+                                        <input type="password" id="senha_aluno" placeholder="Senha">
+                                    </div>
+                            </div>
+                        <!--Fim da Div formulario-->
+
+                        <!--Botão Cadastrar-->
+                        <div class="btn-final">
+                            <button type="submit" class="btn-black">Cadastrar</button>
                         </div>
 
-                    <!--Nome Completo-->   
-                        <div>
-                            <label for="nome_aluno">Nome Completo:</label>
-                            <input type="name" id="nome_aluno">
-                        </div>
 
-                    <!--Email-->
-                        <div>
-                            <label for="email_aluno">Email:</label>
-                            <input type="email" id="email_aluno">
-                        </div>
 
-                    <!--Senha-->
-                        <div>
-                            <label for="senha_aluno">Senha:</label>
-                            <input type="password" id="senha_aluno">
-                        </div>
-
-                    <!--Botão Cadastrar-->
-                        <button type="submit">Cadastrar</button>
-
-                </form>
-            <!--Fim do Fomulario Cadastro de Alunos-->
+        
+                    </form>
+                <!--Fim do Fomulario Cadastro de Alunos-->
 
         </div>
     <!--Fim da Div Cadastrar Manualmente-->

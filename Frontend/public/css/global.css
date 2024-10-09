@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*Padrões do Projeto*/
+
+    /*Variaveis*/
+        :root
+        {
+            --color-1: #2E2E2E;
+            --color-2: #707070;
+            --color-3: #D9D9D9;
+            --color-4: #6a6a6a;
+            --color-5: #989898;
+            --color-base: #F2F2F2;
+        }
+    /*Estilos*/
+        *
+        {
+            /*Size*/
+                box-sizing: border-box;
+                margin: 0;
+                border: 0;
+
+            /*Text*/
+                font-family: "Lato", sans-serif;
+                font-size: 1.2rem;
+        }
+        body
+        {
+            /*Background*/
+                background-color: var(--color-base)
+        }
+
+    /*Classes*/
+        
+        /*Botão voltar*/
+            .btn-voltar
+            { 
+                /*Background*/
+                    background-color: var(--color-2);
+
+                /*Padding*/
+                    padding-left: 0.99em;
+                    padding-right: 0.99em;
+                    padding-top: 0.06em;
+                    padding-bottom: 0.06em;
+
+                /*Size*/
+                    width: fit-content;
+                    height: fit-content;
+
+                /*Position*/
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    margin-top: 1em;
+                    margin-left: 1.5em;
+
+                /*Border*/
+                    border-radius: 0.2em;
+            }
+            .btn-voltar img
+            {
+                /*Size*/
+                    width: 1.25em;
+            }
+
+        /*Titulo Principal*/
+            .page-title
+            {
+                /*Text*/        
+                    font-size: 1.41rem;
+                    font-weight: bold;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                /*Position*/
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+            }
+
+
+        /*Multiform*/
+            .multiform
+            {
+                /*Position*/
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(4.5em, 1fr));
+            }
+
+            /*Botão Base*/
+                .multiform-btn 
+                {
+                    /*Position*/
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                    /*Padding*/
+                        padding-top: 0.67em;
+                        padding-bottom: 0.67em;
+
+                }
+
+            /*Icone*/
+                .multiform-icon
+                {
+                    /*Text*/
+                        font-size: 2.35rem;
+                }
+
+            /*Titulo da Seção*/
+                .multiform-btn p
+                {
+                    /*Text*/
+                        text-align: center;
+                        font-size: 0.7em;
+
+                        margin-top: 0.5em;
+                        margin-bottom: 0;
+                }
+
+            /*Botão Ativo*/
+                .multiform-active
+                {
+                    /*Background*/
+                        background-color: var(--color-1);
+
+                    /*Color*/
+                        color: white;
+                }
+            
+            /*Botão Desativado*/
+                .multiform-disable
+                {
+                    /*Background*/
+                        background-color: var(--color-3);
+                }
+
+        /*Fim do Multiform*/
+
+        /*Botão Preto*/
+            .btn-black
+            {
+                /*Backgrounmd*/
+                    background-color: var(--color-1);
+
+                /*Text*/
+                    color: white;
+                    font-size: 1.41rem;
+
+                /*Size*/
+                    padding-left: 1.7em;
+                    padding-right: 1.7em;
+                    padding-top: 0.33em;
+                    padding-bottom: 0.33em;
+
+                /*Border*/
+                    border-radius: 1em;
+            }
+
+        /*Alinhamento do Botão Final*/
+            .btn-final
+            {
+                /*Position*/
+                    position: absolute;
+                    bottom: 0;
+
+                    display: flex;
+                    justify-content: center;
+
+                /*Size*/
+                    width: 100%;
+
+                /*Padding*/
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+            }
+    

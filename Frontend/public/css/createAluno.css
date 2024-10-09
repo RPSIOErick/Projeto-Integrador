@@ -1,0 +1,107 @@
+/*Titulo interno*/
+    .title-createAluno
+    {
+        /*Text*/     
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+
+        /*Position*/
+            margin-top: 1em;
+            margin-bottom: 1em;
+    }
+
+    /*Importar Aluno*/
+
+        /*Texto Importar Arquivo*/
+            .explicacao-importacao
+            {
+                /*Text*/
+                    text-align: center;
+
+                /*Padding*/
+                    padding-left: 1em;
+                    padding-right: 1em;
+            }
+
+        /*Link SIGA*/
+            .explicacao-importacao a
+            {
+                /*Text*/
+                    text-decoration: none;
+                    color: var(--color-4);
+            }
+
+        /*Botão Arquivo*/
+            .file_aluno-design
+            {
+                /*Background*/
+                    background-color: var(--color-3);
+
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+            }
+
+        /*Icone do Botão Arquivo*/
+            .file_aluno-icon
+            {
+                /*Text*/
+                    font-size: 1.7em;
+
+                /*Padding*/
+                    padding: 0.78em;
+            }
+
+        /*Input Aluno*/
+            #file_aluno
+            {
+                /*Display*/
+                    display: none;
+            }
+
+
+        /*Fim do Importar Aluno*/
+
+        /*Cadastrar Manualmente*/
+            .input-createAluno
+            {
+                /*Position*/
+                    display: flex;
+                    flex-direction: column;
+
+                /*Padding*/
+                    padding-top: 0.4em;
+                    padding-bottom: 0.4em;
+            }
+            .input-createAluno label
+            {
+                /*Text*/
+                    text-align: center;
+
+                /*Position*/
+                    margin-bottom: 0.5em;
+            }
+            .input-createAluno input
+            {
+                /*Background*/
+                    background-color: var(--color-3);
+                
+                /*Border*/
+                    border-width: 0.1em;
+                    border-style: solid;
+                    border-color: var(--color-5);
+                    border-radius: 0.2em;
+
+                /*Padding*/
+                    padding-left: 0.5em;
+                    padding-right: 0.5em;
+
+            }
+            .div-form-createAluno
+            {
+                /*Padding*/
+                    padding-left: 1.5em;
+                    padding-right: 1.5em;
+            }
+        /*Fim do Cadastrar Manualmente*/
