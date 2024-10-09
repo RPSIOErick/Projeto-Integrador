@@ -10,6 +10,7 @@
             --color-3: #D9D9D9;
             --color-4: #6a6a6a;
             --color-5: #989898;
+            --color-6: #EFECEC;
             --color-base: #F2F2F2;
         }
     /*Estilos*/
@@ -149,6 +150,7 @@
                 /*Text*/
                     color: white;
                     font-size: 1.41rem;
+                    text-decoration: none;
 
                 /*Size*/
                     padding-left: 1.7em;
