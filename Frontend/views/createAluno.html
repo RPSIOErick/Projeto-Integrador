@@ -97,70 +97,72 @@
     <!--Fim do Menu Multiform-->
 
     <!--Div Importar Arquivo-->
+        <div class="cadastrar-importar">
+            <!--Titulo-->
+                <h2>Importar Arquivo</h2>
 
-        <!--Titulo-->
-            <h2>Importar Arquivo</h2>
+            <!--Explicação-->
+                <p>
+                    Importe um arquivo .csv com o nome 
+                    de todos os alunos da turma, saiba 
+                    como gerar uma lista de alunos 
+                    pelo sistema SIGA
+                </p>
+            
+            <!--Formulario Importação CSV-->
+                <form action="">
 
-        <!--Explicação-->
-            <p>
-                Importe um arquivo .csv com o nome 
-                de todos os alunos da turma, saiba 
-                como gerar uma lista de alunos 
-                pelo sistema SIGA
-            </p>
-        
-        <!--Formulario Importação CSV-->
-            <form action="">
+                    <div>
+                        <input type="file" name="" id="">
+                    </div>
+                    
+                    <button type="submit">Enviar</button>
 
-                <div>
-                    <input type="file" name="" id="">
-                </div>
-                
-                <button type="submit">Enviar</button>
-                
-            </form>
-        <!--Fim do Formulario Importação CSV-->
+                </form>
+            <!--Fim do Formulario Importação CSV-->
 
+        </div>
     <!--Fim da Div Importar Arquivo-->
 
     <!--Div Cadastrar Manualmente-->
+        <div class="cadastrar-manual" style="display: none;">
+            <!--Titulo-->
+                <h2>Cadastrar Aluno Manualmente</h2>
 
-        <!--Titulo-->
-            <h2>Cadastrar Aluno Manualmente</h2>
+            <!--Fomulario Cadastro de Alunos--> 
+                <form action="">
 
-        <!--Fomulario Cadastro de Alunos--> 
-            <form action="">
+                    <!--RA-->
+                        <div>
+                            <label for="ra_aluno">RA:</label>
+                            <input type="text" id="ra_aluno">
+                        </div>
 
-                <!--RA-->
-                    <div>
-                        <label for="ra_aluno">RA:</label>
-                        <input type="text" id="ra_aluno">
-                    </div>
+                    <!--Nome Completo-->   
+                        <div>
+                            <label for="nome_aluno">Nome Completo:</label>
+                            <input type="name" id="nome_aluno">
+                        </div>
 
-                <!--Nome Completo-->   
-                    <div>
-                        <label for="nome_aluno">Nome Completo:</label>
-                        <input type="name" id="nome_aluno">
-                    </div>
+                    <!--Email-->
+                        <div>
+                            <label for="email_aluno">Email:</label>
+                            <input type="email" id="email_aluno">
+                        </div>
 
-                <!--Email-->
-                    <div>
-                        <label for="email_aluno">Email:</label>
-                        <input type="email" id="email_aluno">
-                    </div>
+                    <!--Senha-->
+                        <div>
+                            <label for="senha_aluno">Senha:</label>
+                            <input type="password" id="senha_aluno">
+                        </div>
 
-                <!--Senha-->
-                    <div>
-                        <label for="senha_aluno">Senha:</label>
-                        <input type="password" id="senha_aluno">
-                    </div>
+                    <!--Botão Cadastrar-->
+                        <button type="submit">Cadastrar</button>
 
-                <!--Botão Cadastrar-->
-                    <button type="submit">Cadastrar</button>
+                </form>
+            <!--Fim do Fomulario Cadastro de Alunos-->
 
-            </form>
-        <!--Fim do Fomulario Cadastro de Alunos-->
-
+        </div>
     <!--Fim da Div Cadastrar Manualmente-->
 
 
