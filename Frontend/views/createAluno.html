@@ -85,14 +85,14 @@
         <div class="multiform">
 
             <!--Botão Importar Arquivo-->
-                <div class="multiform-btn multiform-active">
-                        <ion-icon name="document-text-outline" class="multiform-icon"></ion-icon>
-                        <p>Importar Arquivo</p>
+                <div class="multiform-btn multiform-active"  onclick="toggleActive(this)">
+                    <ion-icon name="document-text-outline" class="multiform-icon"></ion-icon>
+                    <p>Importar Arquivo</p>
                 </div>
             <!--Fim do Botão Importar Arquivo-->
 
             <!--Botão Cadastrar Manualmente-->
-                <div class="multiform-btn multiform-disable">
+                <div class="multiform-btn multiform-disable" onclick="toggleActive(this)">
                     <ion-icon name="person-add-outline" class="multiform-icon"></ion-icon>
                     <p>Cadastrar Manualmente</p>
                 </div>
@@ -192,6 +192,9 @@
 
         </div>
     <!--Fim da Div Cadastrar Manualmente-->
+
+    <!--JS-->
+        <script src="../public/js/multiform-use.js"></script>
 
 
 </body>
