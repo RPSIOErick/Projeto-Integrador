@@ -2,7 +2,7 @@
 const { Sequelize } = require('../imports/imports')
 
 // Database connection
-const sequelize = new Sequelize('bd_pi', 'root', 'TURUca2020**', {
+const sequelize = new Sequelize('bd_pi', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 })
