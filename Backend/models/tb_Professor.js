@@ -8,7 +8,7 @@ const Professor = sq.define('Professor', {
       autoIncrement: true,
     },
     RM: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     Senha: {

@@ -20,7 +20,7 @@ const Aluno = sq.define('Aluno', {
       allowNull: false,
     },
     RA: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     Senha: {
