@@ -1,37 +1,28 @@
 const { DataTypes } = require('sequelize');
 const { sq } = require('../config/database');
 
-
-const Aluno = sq.define('Aluno', {
-    Cod_Aluno: {
+const Professor = sq.define('Professor', {
+    ID_Prof: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    Cod_Curso: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'tb_Cursos',
-        key: 'Cod_Curso',
-      }
-    },
-    Representante: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    RA: {
+    RM: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     Senha: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    Status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     }
-}, {
-    tableName: 'tb_Aluno',
+  }, {
+    tableName: 'tb_Professor',
     timestamps: false
   });
 
-  module.exports = Aluno;
-  
+  module.exports = Professor;
   
