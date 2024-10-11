@@ -11,6 +11,7 @@
             --color-4: #6a6a6a;
             --color-5: #989898;
             --color-6: #EFECEC;
+            --color-7: #CACACA;
             --color-base: #F2F2F2;
         }
     /*Estilos*/
@@ -179,4 +180,46 @@
                     padding-top: 1em;
                     padding-bottom: 1em;
             }
-    
+
+    /*Formulario padrao*/
+        .input-template
+        {
+            /*Position*/
+                display: flex;
+                flex-direction: column;
+
+            /*Padding*/
+                padding-top: 0.4em;
+                padding-bottom: 0.4em;
+        }
+        .input-template label
+        {
+            /*Text*/
+                text-align: center;
+
+            /*Position*/
+                margin-bottom: 0.5em;
+        }
+        .input-template input, .input-template select
+        {
+            /*Background*/
+                background-color: var(--color-3);
+            
+            /*Border*/
+                border-width: 0.1em;
+                border-style: solid;
+                border-color: var(--color-5);
+                border-radius: 0.2em;
+
+            /*Padding*/
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+
+        }
+        .div-form-template
+        {
+            /*Padding*/
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+        }
+    /*Fim do Form Padrao*/

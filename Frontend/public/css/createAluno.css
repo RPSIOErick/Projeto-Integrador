@@ -63,45 +63,4 @@
 
         /*Fim do Importar Aluno*/
 
-        /*Cadastrar Manualmente*/
-            .input-createAluno
-            {
-                /*Position*/
-                    display: flex;
-                    flex-direction: column;
-
-                /*Padding*/
-                    padding-top: 0.4em;
-                    padding-bottom: 0.4em;
-            }
-            .input-createAluno label
-            {
-                /*Text*/
-                    text-align: center;
-
-                /*Position*/
-                    margin-bottom: 0.5em;
-            }
-            .input-createAluno input
-            {
-                /*Background*/
-                    background-color: var(--color-3);
-                
-                /*Border*/
-                    border-width: 0.1em;
-                    border-style: solid;
-                    border-color: var(--color-5);
-                    border-radius: 0.2em;
-
-                /*Padding*/
-                    padding-left: 0.5em;
-                    padding-right: 0.5em;
-
-            }
-            .div-form-createAluno
-            {
-                /*Padding*/
-                    padding-left: 1.5em;
-                    padding-right: 1.5em;
-            }
-        /*Fim do Cadastrar Manualmente*/
+        

@@ -1,0 +1,116 @@
+.items-disciplina
+{
+    /*Padding*/
+        padding-left: 1em;
+        padding-right: 1em;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+}
+.item-disciplina
+{
+    /*Background*/
+        background-color: var(--color-7);
+
+    /*Position*/
+        display: flex;
+        flex-direction: row;
+        grid-template-rows: 3fr;
+        align-items: center;
+
+        position: relative;
+
+    /*Padding*/
+        padding-top: 0.72em;
+        padding-bottom: 0.72em;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+
+    /*Border*/
+        border-radius: 0.5em;
+        box-shadow: 0.1em 0.15em 0.5em rgba(0, 0, 0, 0.5);
+
+
+}
+
+/*Id Disciplina*/
+    .item-disciplina span
+    {
+        /*Font*/
+            font-weight: bold;
+    }
+
+/*Titulo Disciplina*/
+    .item-disciplina p
+    {
+        /*Font*/
+            margin-bottom: 0;
+
+        /*Padding*/
+            padding-left: 0.5em;
+    }
+/*Botões de Ação*/
+    .btns-disciplina
+    {
+        /*Background*/
+            background-color: var(--color-1);
+            
+        /*Position*/
+            display: flex;
+            flex-direction: row;
+            grid-template-rows: 2fr;
+            align-items: center;
+
+            position: absolute;
+            right: 0.5em;
+
+        /*Border*/
+            border-radius: 0.4em;
+            border-width: 0.08em;
+            border-style: solid;
+            border-color: black;
+    }
+    .btns-disciplina a
+    {
+        /*Text*/
+            color: white;
+            text-decoration: none;
+            font-size: 0.6em;
+            text-transform: uppercase;
+
+            
+        /*Padding*/
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 1.2em;
+            padding-right: 0.8em;
+
+
+
+    }
+    .form-delete-disciplina
+    {
+        display: flex;
+        align-items: center;  
+    }
+    .btns-disciplina button
+    {
+        /*Text*/
+            color: white;
+            font-size: 0.6em;       
+            text-transform: uppercase;
+            
+        /*Background*/
+            background-color: transparent;
+
+        /*Border*/
+            border-left: 0.1em solid black;
+
+        /*Padding*/
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 0.8em;
+            padding-right: 1.2em;
+    }
+/*Fim dos Botões de Ação*/
