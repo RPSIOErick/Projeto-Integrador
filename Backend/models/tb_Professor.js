@@ -7,6 +7,10 @@ const Professor = sq.define('Professor', {
       primaryKey: true,
       autoIncrement: true,
     },
+    Nome: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     RM: {
       type: DataTypes.STRING,
       allowNull: false,

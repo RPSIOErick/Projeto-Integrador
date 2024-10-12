@@ -4,6 +4,7 @@ const multer = require('multer');
 const alunoController = require('../controllers/alunoController')
 const disciplinasController = require('../controllers/disciplinasController')
 const professorController = require('../controllers/professorController')
+const cursoController = require('../controllers/cursoController')
 const router = express.Router()
 
 const storage = multer.memoryStorage()
@@ -38,6 +39,20 @@ router.post('/professor/update/:id', professorController.updateProfessor)
 router.delete('/professor/delete/:id', professorController.deleteProfessor)
 
 router.get('/professor/read/:id', professorController.readUniProf)
+
+
+//Routes - Curso
+
+router.post('/curso/create', cursoController.createCurso)
+
+router.get('/curso/read', cursoController.readCurso)
+
+router.post('/curso/update/:id', cursoController.updateCurso)
+
+router.delete('/curso/delete/:id', cursoController.deleteCurso)
+
+router.get('/curso/read/:id', cursoController.readUniCurso)
+
 
 // Export Module
 module.exports = router;

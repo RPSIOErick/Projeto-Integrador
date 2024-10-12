@@ -9,30 +9,30 @@ const Turmas = require('./tb_Turmas')
 
 // Sync with Database
 
-// Tipo_Prof.sync().then(() => {
-//     console.log("Tabela tb_tipo_prof criada com sucesso!")
-// })
+Tipo_Prof.sync().then(() => {
+    console.log("Tabela tb_tipo_prof criada com sucesso!")
+})
 
-// Professor.sync().then(() => {
-//     console.log("Tabela tb_professor criada com sucesso!")
-// })
+Professor.sync().then(() => {
+    console.log("Tabela tb_professor criada com sucesso!")
+})
 
-// Permissao.sync().then(() => {
-//     console.log("Tabela tb_permissao criada com sucesso!")
-// })
+Permissao.sync().then(() => {
+    console.log("Tabela tb_permissao criada com sucesso!")
+})
 
-// Disciplinas.sync().then(() => {
-//     console.log("Tabela tb_disciplinas criada com sucesso!")
-// })
+Disciplinas.sync().then(() => {
+    console.log("Tabela tb_disciplinas criada com sucesso!")
+})
 
-// Cursos.sync().then(() => {
-//     console.log("Tabela tb_cursos criada com sucesso!")
-// })
+Cursos.sync().then(() => {
+    console.log("Tabela tb_cursos criada com sucesso!")
+})
 
-// Aluno.sync().then(() => {
-//     console.log("Tabela tb_alunos criada com sucesso!")
-// })
+Aluno.sync().then(() => {
+    console.log("Tabela tb_alunos criada com sucesso!")
+})
 
-// Turmas.sync().then(() => {
-//     console.log("Tabela tb_turmas criada com sucesso!")
-// })
+Turmas.sync().then(() => {
+    console.log("Tabela tb_turmas criada com sucesso!")
+}) 

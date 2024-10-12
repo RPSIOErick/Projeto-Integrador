@@ -19,6 +19,10 @@ const Aluno = sq.define('Aluno', {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    Nome: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     RA: {
       type: DataTypes.STRING,
       allowNull: false,

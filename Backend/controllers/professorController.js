@@ -2,13 +2,13 @@ const Professor = require('../models/tb_Professor');
 
 const createProfessor = async (req, res) => {
     try {
-        const { ID_Prof, RM, Senha, Status } = req.body;
+        const { Nome, RM, Senha, Status } = req.body;
         
         // Verificar se os dados estão vindo no body
-        console.log('Dados recebidos:', { ID_Prof, RM, Senha, Status });
+        console.log('Dados recebidos:', { Nome, RM, Senha, Status });
 
         // Criar a professor no banco de dados
-        const professor = await Professor.create({ ID_Prof, RM, Senha, Status });
+        const professor = await Professor.create({ Nome, RM, Senha, Status });
         
         // Retorna a professor criada
         res.status(201).json(professor);
@@ -36,7 +36,7 @@ const readProfessor = async (req, res) => {
 const updateProfessor = async (req, res) => {
     try {
         const { id } = req.params; // ID da professor que será atualizada
-        const { RM, Senha, Status } = req.body; // Dados atualizados da professor
+        const { Nome, RM, Senha, Status } = req.body; // Dados atualizados da professor
 
         // Verificar se a professor existe no banco
         const professor = await Professor.findByPk(id);
@@ -45,7 +45,7 @@ const updateProfessor = async (req, res) => {
         }
 
         // Atualizar os dados da professor
-        await professor.update({ RM, Senha, Status });
+        await professor.update({ Nome, RM, Senha, Status });
 
         // Retorna a professor atualizada
         res.json({ message: "Professor atualizado com sucesso!", professor });
