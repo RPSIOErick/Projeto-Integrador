@@ -26,6 +26,7 @@ const Aluno = sq.define('Aluno', {
     RA: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
     Senha: {
       type: DataTypes.STRING,
@@ -34,7 +35,7 @@ const Aluno = sq.define('Aluno', {
 }, {
     tableName: 'tb_Aluno',
     timestamps: false
-  });
+});
 
   module.exports = Aluno;
   

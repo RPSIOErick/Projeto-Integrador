@@ -11,9 +11,15 @@ const storage = multer.memoryStorage()
 const upload = multer({ storage })
 
 // Routes - Aluno
-router.post('/aluno', alunoController.createAluno)
+router.post('/aluno/create', alunoController.createAluno)
 
-router.post('/aluno/upload', upload.single('csv'), alunoController.readAluno)
+router.post('/aluno/upload', upload.single('csv'), alunoController.readAlunoFile)
+
+router.get('/aluno/read', alunoController.readAluno)
+
+router.post('/aluno/update/:id', alunoController.updateAluno)
+
+router.delete('/aluno/delete/:id', alunoController.deleteAluno)
 
 
 // Routes - Disciplinas
