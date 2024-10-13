@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Professor</title>
+
+        <!-- importação botstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <!-- link css -->
+        <link rel="stylesheet" href="../public/css/global.css">
+        <link rel="stylesheet" href="../public/css/readProfessor.css">
+
+        <!-- importação io icons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </head>
+    <body>
+        <!-- Container -->
+            <div class="container-fluid">
+
+                <!-- Navbar -->        
+                    <nav class="navbar fixed-top navbar-custom">
+                        <div class="container-fluid">
+
+                            <!-- icon menu -->
+                            <button class="navbar-toggler iconMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Título -->
+                            <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteDesktop" href="#">
+                                SGTF - Sistema de Gerenciamento de Trabalhos Finais
+                            </a>
+
+                            <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteMobile" href="#">
+                                SGTF
+                            </a>
+
+                            <!-- funções de aumento/redução de font -->
+                            <div class="d-flex align-items-center ms-auto d-fonte-ajuste d-none d-md-block">
+                                <!-- Links A+ e A- -->
+                                <div class="d-flex align-items-center me-5 text-white">
+                                    <a class="navbar-brand">A+</a>
+                                    <a class="navbar-brand">A-</a>
+                                </div>
+                            </div>
+
+                            <!-- Ícone de perfil -->
+                            <a href="#">
+                                <ion-icon name="person-circle-outline" class="icon-profile"></ion-icon>                        
+                            </a>
+
+                            <!-- menu -->
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+                                <!-- header -->
+                                <div class="text-white offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SGTF</h5>
+                                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            
+                                <!-- body -->
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="../views/pageInitial.html">Professor</a>
+                                        </li>  
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">Turma</a>
+                                        </li>                           
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                <!-- (fim) navbar -->
+
+                <div class="row row-main">
+
+                    <div class="row">
+                        <!--Botão Voltar-->
+                            <div class="text-start d-grid d-md-block div-btnVoltar">
+                                <a href="../views/pageInitial.html" class="btn-voltar">
+                                    <button class="btn btn-primary" type="button">
+                                        <img src="../public/img/icon_return.png" alt="Botão voltar">
+                                    </button>
+                                </a>
+                            </div>
+                        <!--Fim do Botão Voltar--> 
+                        
+                        <!-- btn cadastrar para desktop -->
+                            <div class="col">
+                                <div class="d-md-flex justify-content-md-end div-btnCadastrar">
+                                    <button class="btn btn-primary d-flex justify-content-center align-items-center" type="button">Cadastrar Professor &nbsp; &nbsp; <ion-icon name="person-add-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        <!-- (fim) btn cadastrar para desktop -->
+                    </div>
+
+                    <!-- btn cadastrar para mobile -->
+                    <div class="d-grid d-md-flex justify-content-md-end">
+                        <a href="../views/CreateProfessor.html" class="text-decoration-none">
+                            <button class="btn btn-primary fixed-button" type="button">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </div>
+   
+                    <!-- title -->
+                    <h3 class="text-center mb-5">Lista de Professores</h3>
+
+                    <!-- search -->
+                        <div class="row justify-content-center mb-5 row-search">
+
+                            <!-- Input Search -->
+                            <div class="col d-flex justify-content-end">
+                                <input type="text" class="form-control py-2 px-3" placeholder="Buscar por RM">
+                            </div>
+
+                            <!-- Button Buscar Desktop-->
+                            <div class="col col-btnBuscarPC">
+                                <button type="submit" class="btn btn-primary btn-buscar py-2 px-5">Buscar</button>
+                            </div>
+
+                            <!-- Button Buscar Mobile -->
+                            <div class="col col-buscarMobile">
+                                <button type="submit" class="btn btn-primary"><ion-icon name="search-outline" class="iconSearch"></ion-icon></button>
+                            </div>
+                        </div>
+                    <!-- (fim) search -->
+
+                    <!-- card -->
+                        <div class="row mb-3 row-user">
+
+                            <div class="col col-dados">
+                                <span class="d-block mb-2 dadoNome">Vanderson da Silva</span>
+                                <span class="d-block dadoRM">RM: 12345</span>
+                            </div>
+
+                            <div class="col col-buttons">
+                                <div class="d-grid d-md-block text-end">
+                                    <a href="../views/UpdateProfessor.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="img-edit" viewBox="0 0 512 512">
+                                            <path d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                            <path d="M459.94 53.25a16.06 16.06 0 00-23.22-.56L424.35 65a8 8 0 000 11.31l11.34 11.32a8 8 0 0011.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38zM399.34 90L218.82 270.2a9 9 0 00-2.31 3.93L208.16 299a3.91 3.91 0 004.86 4.86l24.85-8.35a9 9 0 003.93-2.31L422 112.66a9 9 0 000-12.66l-9.95-10a9 9 0 00-12.71 0z" fill="currentColor"/>
+                                        </svg>
+                                    </a>
+
+                                    <a href="#">
+                                        <button type="button" class="btn custom-button" data-bs-toggle="modal" data-bs-target="#modalDelete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="img-delete" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
+                                        </button>
+                                    </a>
+                                    <!-- Modal -->
+                                        <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Permissão para Exclusão</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+
+                                                    <div class="p-4 modal-body">
+                                                        <p class="text-center mb-4">Deseja excluir o Usuário {nomeUsuario}?</p>
+                                                        <p class="text-center"><b>Ao excluir este usuário, o acesso será permanentemente removido e não poderá ser recuperado.</b></p>
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-center modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-primary">Sim</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <!-- (fim) Modal -->
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    <!-- (fim) card -->
+                </div>
+                  
+            </div>
+        <!-- (fim) Container -->
+        
+    </body>
+</html>

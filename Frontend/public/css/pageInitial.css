@@ -1,0 +1,64 @@
+/* title */
+.row-main h3{
+    margin-top: 1vh;
+    font-size: clamp(1.5rem, 1.8vw, 3rem)!important;
+}
+
+/* Part: Error  */
+    .row-error{
+        margin-bottom: 2vh;
+    }
+
+    /* subtitle */
+    .row-error h4{
+        font-size: clamp(1.3rem, 1vw, 2rem)!important;
+    }
+
+    /* image */
+    .imgError{
+        width: 60vh;
+    }
+
+    /* text */
+        .txt-pc{
+            font-size: clamp(1.1rem, 1vw, 2rem)!important;
+        }
+        .txt-mobile{
+            display: none;
+        }
+/* (fim) Part: Error  */
+
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+    /* title */
+    .row-main h3{
+        font-size: clamp(2rem, 2.6vh, 5rem)!important;
+    }
+
+    /* Part: Error  */
+        .row-main{
+            margin-top: 17vh;
+        }
+
+        /* subtitle */
+        .row-error h4{
+            font-size: clamp(1.7rem, 2.1vh, 4rem)!important;
+        }
+
+        /* image */
+        .imgError{
+            width: 40vh;
+        }
+
+        /* text */
+            .txt-pc{
+                display: none;
+            }
+        
+            .txt-mobile{
+                display: block;
+                font-size: clamp(1.5rem, 2vh, 3rem)!important;
+            }
+    /* (fim) Part: Error */
+}

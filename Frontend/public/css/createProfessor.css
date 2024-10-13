@@ -1,0 +1,106 @@
+/* Formulário */
+    .coluna-forms{
+        border-radius: 3vh;
+        border: #3e4966 solid 0.2vw;
+        padding: 3rem 4rem;
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        font-size: clamp(1rem, 1.2vw, 2rem);
+    }
+
+    /* Campos */
+    .coluna-forms input, .coluna-forms select{   
+        border-radius: 1rem;   
+        border: #2d3e68 solid 0.05vw;
+        font-size: clamp(1rem, 1vw, 1.8rem);
+    }
+
+    /* Button Cadastrar */
+        .btn-cadastrar{
+            border-radius: 1.7vh;
+            padding: 1.4vh 6vw;
+            background-color: #228a59;
+            border: none;
+        }
+
+        .btn-cadastrar:hover{
+            font-weight: 500;
+            background-color: #1d7c50;
+        }
+/* (fim) Formulário */
+
+/* Responsividade Mobile */
+    @media screen and (orientation: portrait)
+    {
+        .row-main{
+            margin: 0;
+        }
+
+        /* forms */
+            .coluna-forms {
+                padding: 4.5rem; 
+                width: 100%;
+                border: 0;
+                border-radius: 0; 
+                height: auto;
+                box-shadow: none;
+                padding: 4vh 3vh;
+            }
+
+            /* titulo */
+                .coluna-forms h3{
+                    font-size: 4.5vw;
+                }
+
+            /* input e label */
+                .label-forms input, .form-select{
+                    padding: 1.5vh;
+                    border-radius: 2vh;
+                    box-shadow: 0 0.2vh 1vh rgba(65, 65, 65, 0.3);
+                    font-size: 1.5rem;
+                }
+
+                .label-forms label{
+                    font-size: clamp(1.9rem, 2.2vh, 4rem);
+                    margin-top: 1.8vh;
+                }
+        
+                .label-forms input{
+                    padding: 2.5vw;
+                    font-size: clamp(1.2rem, 1.8vh, 3rem)!important;
+                }
+
+            /* select (dropdown) */
+                .form-select{ 
+                    font-size: clamp(1.2rem, 1.7vh, 3rem)!important;
+                    border-radius: 2vh!important;
+                
+                    /* seta dropdown */
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>');
+                        background-size: 3.2vw;         
+                        background-repeat: no-repeat;
+                        padding-right: 2.5rem; 
+                    /* (fim) seta dropdown */
+                }
+
+            /* buttons */
+                .btn-gerarSenha{
+                    font-size: clamp(1.2rem, 3.2vw, 3.5rem)!important;  
+                    padding: 1.2vh 5vh; 
+                    border-radius: 5vh;
+                }
+
+                .btn-cadastrar {
+                    font-size: clamp(1.2rem, 3.2vw, 3.5rem)!important;  
+                    padding: 1.7vh 9vh; 
+                    border-radius: 5vh;
+                    margin-top: 8vh;
+                    box-shadow: 0 0.8vh 1.2vh rgba(46, 46, 46, 0.3);
+                }
+            
+                .eye-icon {
+                    width: 3.3vh; 
+                    left: 79%;
+                }
+        /* (fim) forms */
+    }
