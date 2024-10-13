@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Turmas</title>
+
+        <!-- importação botstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <!-- link css -->
+        <link rel="stylesheet" href="../public/css/global.css">
+        <link rel="stylesheet" href="../public/css/readTurma2.css">
+
+        <!-- importação io icons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </head>
+    <body>
+        <!-- Container -->
+            <div class="container-fluid">
+
+                <!-- Navbar -->        
+                    <nav class="navbar fixed-top navbar-custom">
+                        <div class="container-fluid">
+
+                            <!-- icon menu -->
+                            <button class="navbar-toggler iconMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Título -->
+                            <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteDesktop" href="#">
+                                SGTF - Sistema de Gerenciamento de Trabalhos Finais
+                            </a>
+
+                            <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteMobile" href="#">
+                                SGTF
+                            </a>
+
+                            <!-- funções de aumento/redução de font -->
+                            <div class="d-flex align-items-center ms-auto d-fonte-ajuste d-none d-md-block">
+                                <!-- Links A+ e A- -->
+                                <div class="d-flex align-items-center me-5 text-white">
+                                    <a class="navbar-brand">A+</a>
+                                    <a class="navbar-brand">A-</a>
+                                </div>
+                            </div>
+
+                            <!-- Ícone de perfil -->
+                            <a href="#">
+                                <ion-icon name="person-circle-outline" class="icon-profile"></ion-icon>                        
+                            </a>
+
+                            <!-- menu -->
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+                                <!-- header -->
+                                <div class="text-white offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SGTF</h5>
+                                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            
+                                <!-- body -->
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">Professor</a>
+                                        </li>  
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="../views/PageInitial.html">Turma</a>
+                                        </li>                                   
+                                    </ul>                  
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                <!-- (fim) navbar -->
+
+                <div class="row row-main">
+
+                    <!-- title -->
+                    <h3 class="text-center mb-5 titleTurma">{NomeTurma}</h3>
+
+                     <!-- row principal -->
+                     <div class="row justify-content-center align-items-center row-main">
+
+                        <!--Botão Voltar-->
+                            <div class="text-start d-grid d-md-block div-btnVoltar">
+                                <a href="../views/ReadTurma.html" class="btn-voltar">
+                                    <button class="btn btn-primary" type="button">
+                                        <img src="../public/img/icon_return.png" alt="Botão voltar">
+                                    </button>
+                                </a>
+                            </div>
+                        <!--Fim do Botão Voltar--> 
+
+                        
+                        <!--Menu Multiform-->
+                            <div class="multiform">
+
+                                <!--Botão Info Geral -->
+                                    <div class="multiform-btn multiform-active"  onclick="toggleActive(this)">
+                                        <ion-icon name="alert-circle-outline" class="multiform-icon"></ion-icon>
+                                        <p>Geral</p>
+                                    </div>
+                                <!--Fim Botão Info Geral-->
+
+                                <!--Botão Alunos-->
+                                    <a class="text-decoration-none text-black" href="../views/ListaAlunos.html">
+                                        <div class="multiform-btn multiform-disable" onclick="toggleActive(this)">
+                                            <ion-icon name="person-circle-outline" class="multiform-icon"></ion-icon>
+                                            <p>Alunos</p>
+                                        </div>
+                                    </a>
+                                    
+                                <!--Fim do Botão Alunos-->
+
+                                    <!--Botão Grupos-->
+                                    <div class="multiform-btn multiform-disable" onclick="toggleActive(this)">
+                                        <ion-icon name="people-circle-outline" class="multiform-icon"></ion-icon>
+                                        <p>Grupos</p>
+                                    </div>
+                                <!--Fim do Botão Grupos-->
+
+                                <script src="../public/js/multiform-use.js"></script>
+
+                            </div>
+                        <!--Fim do Menu Multiform-->
+
+                        <!-- Parte: Infor Geral -->
+                            <!-- title -->
+                            <h3 class="titleTurma text-center mt-5">Informações Gerais</h3>
+
+                            <div class="col-md-6 g-3 bg-light shadow coluna-forms">
+
+                                <!-- Formulario -->
+                                    <form class="row" id="forms">
+                                                
+                                        <!-- Input Nome Turma -->
+                                        <div class="mb-3 label-forms">
+                                            <label for="nomeTurma" class="form-label">Nome Turma</label>
+                                            <input type="text" class="form-control" id="nomeTurma" placeholder="Dê um nome a turma" maxlength="40" required>
+                                        </div>
+
+                                        <!-- Input Curso -->
+                                        <div class="mb-3 label-forms">
+                                            <label for="cursoSelect" class="form-label">Selecione o Curso</label>
+                                            <select class="form-select custom-select-arrow" aria-label="Campo para selecionar um turno" id="cursoSelect" required>
+                                                <option value="" selected>Selecione o curso</option>
+                                                <option value="1">AMS - Análise e Desenvolvimento de Sistemas</option>
+                                                <option value="2">Análise e Desenvolvimento de Sistemas</option>
+                                                <option value="3">Comércio Exterior</option>
+                                                <option value="4">Desenvolvimento de Produtos Pláticos</option>
+                                                <option value="5">Desenvolvimento de Software Multiplataforma</option>
+                                                <option value="4">Gestão de Recursos Humanos</option>
+                                                <option value="5">Gestão Empresarial</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Input Professor -->
+                                        <div class="mb-3 label-forms">
+                                            <label for="profSelect" class="form-label">Selecione o Professor</label>
+                                            <select class="form-select custom-select-arrow" aria-label="Campo para selecionar um professor" id="profSelect" required>
+                                                <option value="" selected>Selecione o professor</option>
+                                                <option value="1">Professor 1</option>
+                                                <option value="2">Professor 2</option>
+                                                <option value="3">Professor 3</option>
+                                                <option value="4">Professor 4</option>
+                                                <option value="5">Professor 5</option>
+                                                <option value="5">Nenhuma das opções acima</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Input Turno -->
+                                        <div class="mb-3 label-forms">
+                                        <label for="turnoSelect" class="form-label">Selecione o Turno</label>
+                                            <select class="form-select custom-select-arrow" aria-label="Campo para selecionar um turno" id="turnoSelect" required>
+                                                <option value="" selected>Selecione o turno</option>
+                                                <option value="1">Manhã</option>
+                                                <option value="2">Tarde</option>
+                                                <option value="3">Noite</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Input Semestre -->
+                                        <div class="mb-3 label-forms">
+                                            <label for="semestreSelect" class="form-label">Selecione o Semestre</label>
+                                            <select class="form-select custom-select-arrow" aria-label="Campo para selecionar um semestre" id="semestreSelect" required>
+                                                <option value="" selected>Selecione o semestre</option>
+                                                <option value="1">1° Semestre</option>
+                                                <option value="2">2° Semestre</option>
+                                                <option value="3">3° Semestre</option>
+                                                <option value="4">4° Semestre</option>
+                                                <option value="5">5° Semestre</option>
+                                                <option value="5">6° Semestre</option>
+                                                <option value="5">Curso Anual</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Input Ano -->
+                                        <div class="mb-3 label-forms">
+                                            <label for="campoAno" class="form-label">Ano da Turma</label>
+                                            <input type="text" class="form-control" id="campoAno" placeholder="Exemplo: 2019" maxlength="4" onkeypress="return isNumberKey(event)" required>
+                                            <span id="erroAno" class="text-danger"></span>
+                                        </div>
+
+                                    </form>
+                                <!-- (fim) formulario -->
+                            </div>
+                        </div>
+                        </div>
+                    <!-- (fim) row principal -->
+
+                    <!-- buttons etapa editar e excluir -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center div-buttons">
+                            <a href="../views/UpdateTurma.html" class="btn btn-primary me-md-2" type="button">Editar</a>
+                        
+                            <button type="button" class="btn btn-danger custom-button" data-bs-toggle="modal" data-bs-target="#modalDelete">
+                                Excluir
+                            </button>
+
+                            <!-- Modal -->
+                                <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Permissão para Exclusão</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="p-4 modal-body">
+                                                <p class="text-center mb-4">Deseja remover essa turma?</p>
+                                                <p class="text-center"><b>Atenção:</b> Ao excluir esta turma, todos os dados e registros associados a ela serão permanentemente removidos e não poderão ser recuperados.</p>
+                                                <p class="text-center mt-2"><b>Deseja Continuar?</b></p>                    
+                                            </div>
+
+                                            <div class="d-flex justify-content-center modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                                <button type="button" class="btn btn-primary">Sim</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- (fim) Modal -->
+                    
+                        </div>
+                    <!-- buttons etapa editar e excluir -->
+                    
+                <!-- (Fim) Parte: Infor Geral -->
+
+
+                </div>
+                    
+            </div>
+        <!-- (fim) Container -->
+        
+    </body>
+</html>

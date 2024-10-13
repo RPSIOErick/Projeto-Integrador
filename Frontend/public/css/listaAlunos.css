@@ -1,0 +1,146 @@
+ /* Lista contatos */
+
+ 
+    /* title */
+    .titleTurma{
+        font-size: 3.5vh;
+        margin-top: 25vh;
+     }
+     
+
+    .coluna-contatos{
+        border-radius: 3vh;
+        border: #bbbbbb solid 0.1vw;
+        margin-bottom: 5vh;
+        font-size: clamp(1rem, 1.2vw, 2rem);
+    }
+
+    /* Search */
+        .lista-header{
+            width: 100%;
+            padding: 2vh;
+            border-radius: 0 3vh;
+            margin-top: -0.3vh;
+        }
+
+        .input-search input{
+            width: 30vh;
+            border: 0.2vh solid #5c5c5c;
+        }
+
+        .btn-buscar{
+            background-color: #3e5691;
+        }
+
+        .btn-buscar:hover{
+            background-color: #22335f;
+        }
+
+        .col-buscarMobile{
+            display: none;
+        }
+
+    /* Lista */
+        .lista-body{
+            padding: 2vh;
+            height: 70vh;          
+            overflow-y: auto;  
+        }
+
+        .list-group{
+            padding: 2vh 4vw;
+        }
+
+        .list-group-item{
+            margin-bottom: 1.5vh;
+            background-color: rgb(219, 219, 219);
+            border: 0.2vh solid #5c5c5c!important;
+
+        }
+
+        .list-group-item ion-icon{
+            font-size: 5vh;
+
+        }
+
+        .span-svg-eye{
+            background-color: #adadad;
+            border: 0.1vh solid #3e4966;
+            padding: 0.3vh;
+            margin-right: 1vh;
+            border-radius: 0.5vh;
+        }
+
+        .bi-eye-fill{
+            width: 2vw;
+            fill: #383a41;
+        }
+
+/* (fim) Lista contatos */
+
+
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+
+    /* title */
+    .titleTurma{
+       font-size: 3vh;
+       margin-top: 15vh;
+    }
+    
+    /* Parte: search */
+    .row-search {
+        margin-top: 2vh!important;
+        margin-bottom: 2vh;
+    }
+
+    .row-search input{
+        width: 45vw;
+        border-radius: 1.2vh;
+        padding: 1.3vh!important;
+        font-size: 2vh;
+    }
+
+    .col-btnBuscarPC{
+        display: none;
+    }
+
+    .col-buscarMobile{
+        display: block;
+    }
+
+    .col-buscarMobile button{
+        height: 5.4vh;
+        width: 17vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.2vh;
+        background-color: #3e5691;
+    }
+
+    .iconSearch{
+        font-size: 3vh;
+    }
+
+    /* Parte: Lista */
+
+    .coluna-contatos{
+        width: 92vw;
+        border: 0.2vh solid #adadad;
+        margin-bottom: 1.7vh;
+    }
+
+    .nomeAluno{
+        font-size: 2vh;
+    }
+
+    .span-svg-eye{
+        padding: 0.2vh;    
+    }
+
+    .span-svg-eye svg{
+        width: 3.7vh;        
+    }
+}

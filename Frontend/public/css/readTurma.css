@@ -1,0 +1,167 @@
+/* conteudo principal */
+
+    .row-main{
+        display: flex;
+        justify-content: center;
+    }
+
+    .row-main h3{
+        margin-top: 5vh;
+        font-size: clamp(1.5rem, 1.8vw, 3rem)!important;
+    }
+
+    /* button cadastrar */
+        .div-btnCadastrar{
+            margin-top: 15vh;
+            margin-right: 10vh;
+        }
+
+        .div-btnCadastrar button{
+            padding: 1.2vh 2.7vh;
+            border-radius: 20vh;
+            font-size: clamp(1rem, 1vw, 1.5rem);
+        }
+
+        .div-btnCadastrar ion-icon{
+            font-size: 3.4vh;
+        }
+
+        .fixed-button{
+            display: none;
+        }
+
+    /* (fim) button cadastrar */
+
+    /* Part: card */
+      
+        /* collapse */
+        .row-collapse{
+            padding: 1vh 3vw;     
+            width: 65%;
+            margin-bottom: 4vh;
+        }
+        
+        .eye-icon {
+            width: clamp(25px, 1.7vw, 30px);
+            cursor: pointer;
+            position: absolute;
+            right: 1vw;
+            top: 1vh;
+            border: 0;
+            background: none;
+        }
+
+        .chevron {
+            transition: transform 0.3s ease; 
+        }
+
+        .rotate {
+            transform: rotate(180deg); 
+        }
+
+        .collapse-content {
+            display: none;
+        }
+
+        .collapse-button p{
+            font-size: clamp(1rem, 1.2vw, 2rem);
+            margin-bottom: -1vh;
+            font-weight: 500;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .card-body-custom {
+            position: relative;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);      
+        }
+
+        .card-body-custom h5{
+            font-size: clamp(1rem, 1.2vw, 2rem);
+        }
+
+        .card-footer-custom p{
+            background-color: rgb(223, 223, 223);
+            padding: 1vh;
+            border-radius: 1vh;
+            color: black;
+            font-size: clamp(1rem, 1.2vw, 2rem);
+        }
+
+        .card-footer-custom a{
+            padding: 0.8vh 2vw;
+            font-size: clamp(1rem, 1.2vw, 2rem);
+        }
+
+        .card-footer-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .toggle-button {
+            cursor: pointer;
+        }
+
+
+/* (fim) conteudo principal */
+
+
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+    .fixed-button{
+        display: block;
+    }
+
+    .col-btnBuscarPC{
+        display: none!important;
+    }
+
+    .row-main{
+        margin: 0;
+        padding: 0;
+    }
+   
+    /* title */
+    .row-main h3{
+        margin: 18vh 13vh;
+        margin-bottom: 5vh!important;
+        font-size: clamp(1.8rem, 3vh, 4rem)!important;
+    }
+
+    /* Part: Card */
+
+        .row-collapse{
+            width: 100vw;
+        }
+
+        .collapse-button p{
+            font-size: 2vh;
+        }
+
+        .card-body-custom h5{
+            font-size: 2vh;
+        }
+       
+        .card-footer-custom a, .card-footer-custom p{
+            font-size: 2vh;
+        }
+
+        /* button ver mais */
+        .card-footer-custom a{
+            padding: 0.5vh 7vw;
+        }
+
+        .eye-icon{
+            top: 0.5vh;
+            width: 3vh;
+        }
+        
+    /* (fim) Part: Card */
+
+}
+/* (fim) Responsividade Mobile */

@@ -1,0 +1,128 @@
+/* title */
+    .titleTurma{
+        font-size: 3.5vh;
+        margin-top: 25vh;
+    }
+
+/* Formulário */
+    .coluna-forms{
+        border-radius: 3vh;
+        padding: 3rem 4rem;
+        margin-bottom: 5vh;
+        font-size: clamp(1rem, 1.2vw, 2rem);
+        width: 60%;
+    }
+
+    /* Campos */
+    .coluna-forms input, .coluna-forms select{   
+        border-radius: 1rem;   
+        border: #2d3e68 solid 0.05vw;
+        font-size: clamp(1rem, 1vw, 1.8rem);
+        margin-bottom: 2vh;
+    }
+
+/* (fim) Formulário */
+
+/* buttons Editar e Excluir */
+    .div-buttons{
+        margin-bottom: 4vh
+    }
+
+    .div-buttons button{
+        padding: 1vh;
+        width: 10vw;
+        border-radius: 2vh;
+    }
+
+    .btn-excluir{
+        background-color: #d44242;
+        border: none;
+    }
+
+    .btn-excluir:hover{
+        background-color: #8f2121;
+    }
+
+    .col-btn-cadastrar-mobile button{
+        display: none;
+    }
+
+    .div-buttons button{
+        font-size: clamp(1.1rem, 1.1vw, 1.5rem)!important;
+    }
+
+
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+    /* PRIMEIRA PARTE FORMS */
+        .row-main{
+            margin: 0;
+        }
+
+        /* forms */
+            .coluna-forms {
+                padding: 4.5rem; 
+                width: 100%;
+                border: 0;
+                border-radius: 0; 
+                height: auto;
+                box-shadow: none;
+                padding: 4vh 3vh;
+                background: none;
+            }
+
+            /* titulo */
+                .coluna-forms h3{
+                    font-size: 4.5vw;
+                }
+
+            /* input e label */
+                .label-forms input, .form-select{
+                    padding: 1.5vh;
+                    border-radius: 2vh;
+                    box-shadow: 0 0.2vh 1vh rgba(65, 65, 65, 0.3);
+                    font-size: 1.5rem;
+                }
+
+                .label-forms label{
+                    font-size: clamp(1.9rem, 2.2vh, 4rem);
+                    margin-top: 1.8vh;
+                }
+        
+                .label-forms input{
+                    padding: 2.5vw;
+                    font-size: clamp(1.2rem, 1.8vh, 3rem)!important;
+                }
+
+            /* select (dropdown) */
+                .form-select{ 
+                    font-size: clamp(1.2rem, 1.7vh, 3rem)!important;
+                    border-radius: 2vh!important;
+                
+                    /* seta dropdown */
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>');
+                        background-size: 3.2vw;         
+                        background-repeat: no-repeat;
+                        padding-right: 2.5rem; 
+                    /* (fim) seta dropdown */
+                }
+
+
+
+        /* Parte: Buttons */ 
+        .div-buttons{
+            width: 100vw;
+        }
+
+        .div-buttons a, .div-buttons button{
+            font-size: 3vh!important;
+            width: 30vw;
+            border-radius: 2vh;
+        }
+
+        .titleTurma{
+            font-size: 3vh;
+        }
+
+}

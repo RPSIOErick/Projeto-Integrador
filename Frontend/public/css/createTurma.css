@@ -1,0 +1,321 @@
+/* PRIMEIRA PARTE FORMS */
+    /* Formulário */
+    .coluna-forms{
+        border-radius: 3vh;
+        border: #3e4966 solid 0.2vw;
+        padding: 3rem 4rem;
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        font-size: clamp(1rem, 1.2vw, 2rem);
+    }
+
+    /* Campos */
+    .coluna-forms input, .coluna-forms select{   
+        border-radius: 1rem;   
+        border: #2d3e68 solid 0.05vw;
+        font-size: clamp(1rem, 1vw, 1.8rem);
+        margin-bottom: 2vh;
+    }
+
+    /* Button Cadastrar */
+        .btn-cadastrar{
+            border-radius: 1.7vh;
+            padding: 1.4vh 6vw;
+            background-color: #228a59;
+            border: none;
+        }
+
+        .btn-cadastrar:hover{
+            font-weight: 500;
+            background-color: #1d7c50;
+        }
+    /* (fim) Formulário */
+
+/* (FIM) PRIMEIRA PARTE FORMS */
+
+/* SEGUNDA PARTE FORMS */
+    /* Titulos */
+    .row-title h3{
+        margin-bottom: 3vh;
+        font-size: clamp(1.2rem, 3.5vh, 3rem);
+    }
+
+    .row-title p{
+        font-size: clamp(1.3rem, 2.5vh, 3rem);
+    }
+
+    /* Lista contatos */
+  
+        .coluna-contatos{
+            border-radius: 3vh;
+            border: #bbbbbb solid 0.1vw;
+            margin-bottom: 5vh;
+            font-size: clamp(1rem, 1.2vw, 2rem);
+        }
+
+        /* Search */
+            .lista-header{
+                width: 100%;
+                padding: 2vh;
+                border-radius: 0 3vh;
+                margin-top: -0.3vh;
+            }
+
+            .input-search input{
+                width: 30vh;
+                border: 0.2vh solid #5c5c5c;
+            }
+
+            .btn-buscar{
+                background-color: #3e5691;
+            }
+
+            .btn-buscar:hover{
+                background-color: #22335f;
+            }
+
+            .col-buscarMobile{
+                display: none;
+            }
+
+        /* Lista */
+            .lista-body{
+                padding: 2vh;
+                height: 70vh;          
+                overflow-y: auto;  
+            }
+
+            .list-group{
+                padding: 2vh 4vw;
+            }
+
+            .list-group-item{
+                margin-bottom: 1.5vh;
+                background-color: rgb(219, 219, 219);
+                border: 0.2vh solid #5c5c5c!important;
+
+            }
+
+            .list-group-item ion-icon{
+                font-size: 5vh;
+
+            }
+
+            .span-svg-eye{
+                background-color: #adadad;
+                border: 0.1vh solid #3e4966;
+                padding: 0.3vh;
+                margin-right: 1vh;
+                border-radius: 0.5vh;
+            }
+
+            .bi-eye-fill{
+                width: 2vw;
+                fill: #383a41;
+            }
+
+    /* (fim) Lista contatos */
+
+    /* buttons etapa enterior e confirmar */
+    .div-buttons{
+        margin-bottom: 4vh
+    }
+
+    .div-buttons button{
+        padding: 1vh;
+        width: 10vw;
+        border-radius: 2vh;
+    }
+
+    .btn-confirmar{
+        background-color: #388d65;
+    }
+
+    .btn-confirmar:hover{
+        background-color: #2f6e51;
+    }
+
+    .col-btn-cadastrar-mobile button{
+        display: none;
+    }
+
+/* (FIM) SEGUNDA PARTE FORMS */
+
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+    /* PRIMEIRA PARTE FORMS */
+        .row-main{
+            margin: 0;
+        }
+
+        /* forms */
+            .coluna-forms {
+                padding: 4.5rem; 
+                width: 100%;
+                border: 0;
+                border-radius: 0; 
+                height: auto;
+                box-shadow: none;
+                padding: 4vh 3vh;
+                background: none;
+            }
+
+            /* titulo */
+                .coluna-forms h3{
+                    font-size: 4.5vw;
+                }
+
+            /* input e label */
+                .label-forms input, .form-select{
+                    padding: 1.5vh;
+                    border-radius: 2vh;
+                    box-shadow: 0 0.2vh 1vh rgba(65, 65, 65, 0.3);
+                    font-size: 1.5rem;
+                }
+
+                .label-forms label{
+                    font-size: clamp(1.9rem, 2.2vh, 4rem);
+                    margin-top: 1.8vh;
+                }
+        
+                .label-forms input{
+                    padding: 2.5vw;
+                    font-size: clamp(1.2rem, 1.8vh, 3rem)!important;
+                }
+
+            /* select (dropdown) */
+                .form-select{ 
+                    font-size: clamp(1.2rem, 1.7vh, 3rem)!important;
+                    border-radius: 2vh!important;
+                
+                    /* seta dropdown */
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>');
+                        background-size: 3.2vw;         
+                        background-repeat: no-repeat;
+                        padding-right: 2.5rem; 
+                    /* (fim) seta dropdown */
+                }
+
+            /* buttons */
+                .btn-gerarSenha{
+                    font-size: clamp(1.2rem, 3.2vw, 3.5rem)!important;  
+                    padding: 1.2vh 5vh; 
+                    border-radius: 5vh;
+                }
+
+                .btn-cadastrar {
+                    font-size: clamp(1.2rem, 3.2vw, 3.5rem)!important;  
+                    padding: 1.7vh 9vh; 
+                    border-radius: 5vh;
+                    margin-top: 8vh;
+                    box-shadow: 0 0.8vh 1.2vh rgba(46, 46, 46, 0.3);
+                }
+            
+                .eye-icon {
+                    width: 3.3vh; 
+                    left: 79%;
+                }
+        /* (fim) forms */
+    /* (FIM) PRIMEIRA PARTE FORMS */
+
+    /* (FIM) SEGUNDA PARTE FORMS */
+
+        /* Parte: title */
+            .row-title{
+                margin-top: 15vh;
+            }
+
+            .row-title h3{
+                font-size: 4.5vw;
+            }
+
+            .row-title p{
+                font-size: 4.2vw;
+            }
+
+        /* Parte: search */
+            .row-search {
+                margin-top: 2vh!important;
+                margin-bottom: 2vh;
+            }
+
+            .row-search input{
+                width: 45vw;
+                border-radius: 1.2vh;
+                padding: 1.3vh!important;
+                font-size: 2vh;
+            }
+
+            .col-btnBuscarPC{
+                display: none;
+            }
+
+            .col-buscarMobile{
+                display: block;
+            }
+
+            .col-buscarMobile button{
+                height: 5.4vh;
+                width: 17vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1.2vh;
+                background-color: #3e5691;
+            }
+
+            .iconSearch{
+                font-size: 3vh;
+            }
+
+        /* Parte: Lista */
+
+            .coluna-contatos{
+                width: 92vw;
+                border: 0.2vh solid #adadad;
+                margin-bottom: 1.7vh;
+            }
+
+            .nomeAluno{
+                font-size: 2vh;
+            }
+
+            .span-svg-eye{
+                padding: 0.2vh;    
+            }
+
+            .span-svg-eye svg{
+                width: 3.7vh;        
+            }
+
+        /* Parte: Buttons */ 
+            .col-btn-cadastrar-mobile {
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 4vh;
+            }
+
+            .col-btn-cadastrar-mobile button{
+                display: block;
+                width: 50vw;
+                height: 5.5vh;
+                border-radius: 2vh;
+                font-size: 2.3vh;
+            }
+
+            .div-buttons {
+                display: flex !important; 
+                justify-content: center; 
+                gap: 3vw!important;
+            }
+
+            .div-buttons button{
+                width: 30vw;          
+                border-radius: 2vh;
+                font-size: 2.3vh;
+            }
+            
+    /* (FIM) SEGUNDA PARTE FORMS */
+}
