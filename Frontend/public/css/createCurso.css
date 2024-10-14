@@ -1,0 +1,20 @@
+/* Estilização dos campos de input e select */
+input, select {
+    /* Largura total do contêiner */
+    width: 100%; 
+    
+    /* Espaçamento interno */
+    padding: 0.625rem; 
+    
+    /* Tamanho da fonte */
+    font-size: 1rem; 
+    
+    /* Bordas arredondadas */
+    border-radius: 0.3125rem; 
+    
+    /* Borda padrão */
+    border: 1px solid #ccc;
+    
+    /* Espaço abaixo do elemento */
+    margin-bottom: 0.3125rem; 
+}

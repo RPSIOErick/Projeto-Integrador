@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Curso</title>
+
+    <!--Importação do Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <!--Fim da Importação do Bootstrap-->
+
+    <!--Importação IonIcons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <!--Fim da Importação IonIcons-->
+
+    <!--CSSs-->
+    <link rel="stylesheet" href="../public/css/global.css">
+    <link rel="stylesheet" href="../public/css/createCurso.css">
+    <!--Fim dos CSSs-->
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <!--Container Navbar-->
+        <div class="container-fluid">
+
+            <!--Menu Hambuguer-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Fim do Menu Hambuguer-->
+
+            <!--Titulo Navbar-->
+            <a class="navbar-brand" href="#">Nome</a>
+
+            <!--Col Links-->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                <!--Lista de Links-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <!--Fim da Lista de Links-->
+
+            </div>
+            <!--Fim da Col Links-->
+
+        </div>
+        <!--Fim do Container Navbar-->
+
+    </nav>
+    <!--Fim da Navbar-->
+
+    <!--Botão Voltar-->
+    <a href="" class="btn-voltar">
+        <img src="../public/img/icons/icon_return.png" alt="Botão voltar">
+    </a>
+    <!--Fim do Botão Voltar-->
+
+    <!--Titulo Principal-->
+    <h1 class="page-title">EDITAR TURMA</h1>
+
+    <form id="edit-form" class="input-template">
+        <div class="form-group">
+            <label for="class-name">Nome do Curso</label>
+            <input type="text" id="class-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="turno">Selecione o Turno</label>
+            <select id="turno" required>
+                <option value="">Escolha o turno aqui</option>
+                <option value="anual">Anual</option>
+                <option value="semestral">Semestral</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="prof-coordinator">Selecione o Professor Coordenador</label>
+            <select id="prof-coordinator" required>
+                <option value="">Escolha o coordenador aqui</option>
+                <option value="prof1">Professor 1</option>
+                <option value="prof2">Professor 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="work-type">Tipo de Trabalho</label>
+            <select id="work-type" required>
+                <option value="">Escolha o tipo de trabalho</option>
+                <option value="PI">PI</option>
+                <option value="TG">TG</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="tg-options" style="display: none;">
+            <label for="tg-type">Tipo de TG</label>
+            <select id="tg-type">
+                <option value="acad">Artigo Acadêmico</option>
+                <option value="sci">Artigo Científico</option>
+                <option value="monograph">Monografia</option>
+                <option value="practical-project">Projeto Prático</option>
+                <option value="thesis">Tese</option>
+            </select>
+        </div>
+
+        <!-- Exibe o tipo de TG se for selecionado na edição -->
+        <div class="form-group" id="edit-tg-options" style="display: none;">
+            <label for="edit-tg-type">Tipo de TG</label>
+            <select id="edit-tg-type">
+                <option value="acad">Artigo Acadêmico</option>
+                <option value="sci">Artigo Científico</option>
+                <option value="monograph">Monografia</option>
+                <option value="practical-project">Projeto Prático</option>
+                <option value="thesis">Tese</option>
+            </select>
+        </div>
+    </form>
+    <!--Botão Cadastrar curso-->
+    <div class="btn-penultimo">
+        <button type="submit" class="btn-black">Salvar Alterações</button>
+    </div>
+    <!--Botão cancela-->
+    <div class="btn-ultimo">
+        <button class="btn-black" href="../views/readCurso.html">Cancelar</button>
+    </div>
+
+    <!--JS-->
+    <script src="../public/js/updateCurso.js"></script>
+
+</body>
+
+</html>
