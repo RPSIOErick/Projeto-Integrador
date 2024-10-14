@@ -3,18 +3,25 @@ const { sq } = require('../config/database');
 
 
 const Turmas = sq.define('Turmas', {
-    ID_Turma: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    Status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    Periodo: {
+    Nome: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    Responsavel: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    Turno: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    Semestre: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    Ano: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     Cod_Aluno: {
       type: DataTypes.INTEGER,
@@ -29,11 +36,19 @@ const Turmas = sq.define('Turmas', {
         model: 'tb_Disciplinas',
         key: 'ID_Disc',
       }
+    },
+    Status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     }
+
 }, {
     tableName: 'tb_Turma',
-    timestamps: false
-  });
+    timestamps: false,
+    id: false,
+});
 
-  module.exports = Turmas;
+Turmas.removeAttribute('id');
+
+module.exports = Turmas;
   

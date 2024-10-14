@@ -1,6 +1,10 @@
 const app = require('./app');
 const { sq, testConn } = require('./config/database');
 
+const cors = require('cors');
+app.use(cors());
+
+
 // Inicializar o servidor
 let PORT = 8080;
 

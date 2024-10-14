@@ -1,7 +1,6 @@
 const { DataTypes } = require('sequelize');
 const { sq } = require('../config/database');
 
-
 const Aluno = sq.define('Aluno', {
     Cod_Aluno: {
       type: DataTypes.INTEGER,

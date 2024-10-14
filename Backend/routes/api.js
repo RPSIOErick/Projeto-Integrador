@@ -5,6 +5,7 @@ const alunoController = require('../controllers/alunoController')
 const disciplinasController = require('../controllers/disciplinasController')
 const professorController = require('../controllers/professorController')
 const cursoController = require('../controllers/cursoController')
+const turmaController = require('../controllers/turmaController')
 const router = express.Router()
 
 const storage = multer.memoryStorage()
@@ -59,6 +60,16 @@ router.delete('/curso/delete/:id', cursoController.deleteCurso)
 
 router.get('/curso/read/:id', cursoController.readUniCurso)
 
+//Routes - Turma
+router.post('/turma/upload', upload.single('csv'), turmaController.readTurmaFile)
+
+router.post('/turma/create', turmaController.createTurma)
+
+router.get('/turma/read', turmaController.readTurmas)
+
+router.get('/turma/read/:id', turmaController.readUniTurma)
+
+router.delete('/turma/delete/:id', turmaController.deleteTurma);
 
 // Export Module
 module.exports = router;
