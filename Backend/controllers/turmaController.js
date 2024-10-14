@@ -52,16 +52,6 @@ const createTurma = async (req, res) => {
     try {
         const { Nome, Responsavel, Turno, Semestre, Ano, alunos, disciplina } = req.body;
 
-        // Cria a turma
-        const novaTurma = await Turmas.create({
-            Nome,
-            Responsavel,
-            Turno,
-            Semestre,
-            Ano,
-            Status: true 
-        });
-
         await Promise.all(alunos.map(async (Cod_Aluno) => {
             await Turmas.create({
                 Cod_Aluno,      
@@ -85,8 +75,8 @@ const createTurma = async (req, res) => {
 const readTurmas = async (req, res) => {
     try {
         const classes = await Turmas.findAll({
-        attributes: ['Nome', 'Responsavel', 'Turno', 'Semestre', 'Ano'], 
-        group: ['Nome', 'Responsavel', 'Turno', 'Semestre', 'Ano'], 
+            attributes: ['Nome', 'Turno', 'Semestre', 'Ano', 'Status'], 
+            group: ['Nome', 'Turno', 'Semestre', 'Ano', 'Status'], 
         });
 
         res.json(classes);
@@ -100,7 +90,7 @@ const readUniTurma = async (req, res) => {
     try {
         const classDetails = await Turmas.findAll({
             where: { ID_Disc: id },  
-            attributes: ['Nome', 'Responsavel', 'Turno', 'Semestre', 'Ano', 'Cod_Aluno'],
+            attributes: ['Nome', 'Turno', 'Semestre', 'Ano', 'Cod_Aluno', 'Status'],
         });
 
         if (!classDetails.length) {
@@ -108,27 +98,101 @@ const readUniTurma = async (req, res) => {
         }
 
   
-        const { Nome, Responsavel, Turno, Semestre, Ano } = classDetails[0];
+        const { Nome, Turno, Semestre, Ano, Status } = classDetails[0];
 
 
-        const students = classDetails.map(record => record.Cod_Aluno);
+        const alunos = classDetails.map(record => record.Cod_Aluno);
 
  
         const detailedClass = {
             Nome,
-            Responsavel,
             Turno,
             Semestre,
             Ano,
-            students, 
+            Status,
+            alunos,
         };
 
         res.json(detailedClass);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Something went wrong' });
+        res.status(500).json({ error: 'Deu errado a leitura de uma única turma' });
     }
 };
+
+const updateTurma = async (req, res) => {
+
+    try
+    {
+        const { id } = req.params;
+        const { Nome, Turno, Semestre, Ano, Disciplina, alunoRemArray, alunoAddArray, Status } = req.body;
+        
+        await Turmas.update({ Nome, Turno, Semestre, Ano, Disciplina, Status }, { where: { ID_Disc: id } });
+        
+        removeAluno(id, alunoRemArray);
+        
+        addAluno(req);
+
+        res.status(200).json({ message: "Turma atualizada com sucesso!" });
+    }
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Algo deu errado.' });
+    }
+}
+
+const removeAluno = async (id, array) => {
+
+    try {
+    
+        array.forEach(Cod_Aluno => {
+            
+            Turmas.destroy({ where: {
+                Cod_Aluno: Cod_Aluno,
+                ID_Disc: id
+            } })
+
+        });
+
+    }
+
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Deu errado' });
+    }
+
+}
+
+const addAluno = async (req) => {
+
+    try {
+
+        const id = req.params.id;
+
+        const { Nome, Turno, Semestre, Ano, Disciplina, alunoAddArray, Status } = req.body;
+
+        alunoAddArray.forEach(Cod_Aluno => {
+            
+            Turmas.create({
+                Cod_Aluno,      
+                ID_Disc: id,  
+                Nome,        
+                Turno,       
+                Semestre,   
+                Ano,
+                Status
+            })
+
+        });
+
+    }
+
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Something went wrong' });
+    }
+
+}
 
 const deleteTurma = async (req, res) => {
 
@@ -155,5 +219,6 @@ module.exports = {
     createTurma,
     readTurmas,
     readUniTurma,
-    deleteTurma
+    deleteTurma,
+    updateTurma
 };

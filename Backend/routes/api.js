@@ -71,5 +71,7 @@ router.get('/turma/read/:id', turmaController.readUniTurma)
 
 router.delete('/turma/delete/:id', turmaController.deleteTurma);
 
+router.patch('/turma/update/:id', turmaController.updateTurma);
+
 // Export Module
 module.exports = router;
