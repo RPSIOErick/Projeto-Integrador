@@ -18,7 +18,7 @@ router.post('/aluno/upload', upload.single('csv'), alunoController.readAlunoFile
 
 router.get('/aluno/read', alunoController.readAluno)
 
-router.post('/aluno/update/:id', alunoController.updateAluno)
+router.put('/aluno/update/:id', alunoController.updateAluno)
 
 router.delete('/aluno/delete/:id', alunoController.deleteAluno)
 
@@ -28,7 +28,7 @@ router.post('/disciplinas/create', disciplinasController.createDisciplinas)
 
 router.get('/disciplinas/read', disciplinasController.readDisciplinas)
 
-router.post('/disciplinas/update/:id', disciplinasController.updateDisciplinas)
+router.put('/disciplinas/update/:id', disciplinasController.updateDisciplinas)
 
 router.delete('/disciplinas/delete/:id', disciplinasController.deleteDisciplinas)
 
@@ -41,7 +41,7 @@ router.post('/professor/create', professorController.createProfessor)
 
 router.get('/professor/read', professorController.readProfessor)
 
-router.post('/professor/update/:id', professorController.updateProfessor)
+router.put('/professor/update/:id', professorController.updateProfessor)
 
 router.put('/professor/status/:id', professorController.changeStatusProfessor)
 
@@ -54,7 +54,7 @@ router.post('/curso/create', cursoController.createCurso)
 
 router.get('/curso/read', cursoController.readCurso)
 
-router.post('/curso/update/:id', cursoController.updateCurso)
+router.put('/curso/update/:id', cursoController.updateCurso)
 
 router.put('/curso/status/:id', cursoController.changeStatusCurso)
 
@@ -68,8 +68,6 @@ router.post('/turma/create', turmaController.createTurma)
 router.get('/turma/read', turmaController.readTurmas)
 
 router.get('/turma/read/:id', turmaController.readUniTurma)
-
-router.delete('/turma/delete/:id', turmaController.deleteTurma);
 
 router.patch('/turma/update/:id', turmaController.updateTurma);
 
