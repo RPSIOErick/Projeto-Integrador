@@ -55,7 +55,7 @@ const updateProfessor = async (req, res) => {
     }
 };
 
-const deleteProfessor = async (req, res) => {
+const changeStatusProfessor = async (req, res) => {
     try {
         const { id } = req.params; // ID da professor que será excluída
 
@@ -65,11 +65,12 @@ const deleteProfessor = async (req, res) => {
             return res.status(404).json({ error: "Professor não encontrado." });
         }
 
-        // Excluir a professor
-        await professor.destroy();
+        const professorStatus = !professor.Status
+        // Inativar professor
+        await professor.update({ Status: professorStatus });
 
         // Retorna uma mensagem de sucesso
-        res.json({ message: "Professor excluído com sucesso!" });
+        res.json({ message: "Professor editado com sucesso!" });
     } catch (error) {
         console.error("Erro ao excluir professor: ", error);
         res.status(500).json({ error: "Erro ao excluir professor." });
@@ -99,6 +100,6 @@ module.exports = {
     createProfessor,
     readProfessor,
     updateProfessor,
-    deleteProfessor,
+    changeStatusProfessor,
     readUniProf
 };

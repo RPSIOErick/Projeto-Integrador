@@ -36,6 +36,6 @@ const Aluno = sq.define('Aluno', {
     timestamps: false
 });
 
-  module.exports = Aluno;
+module.exports = Aluno;
   
   

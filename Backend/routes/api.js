@@ -43,7 +43,7 @@ router.get('/professor/read', professorController.readProfessor)
 
 router.post('/professor/update/:id', professorController.updateProfessor)
 
-router.delete('/professor/delete/:id', professorController.deleteProfessor)
+router.put('/professor/status/:id', professorController.changeStatusProfessor)
 
 router.get('/professor/read/:id', professorController.readUniProf)
 
@@ -56,7 +56,7 @@ router.get('/curso/read', cursoController.readCurso)
 
 router.post('/curso/update/:id', cursoController.updateCurso)
 
-router.delete('/curso/delete/:id', cursoController.deleteCurso)
+router.put('/curso/status/:id', cursoController.changeStatusCurso)
 
 router.get('/curso/read/:id', cursoController.readUniCurso)
 

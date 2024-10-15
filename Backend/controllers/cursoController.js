@@ -55,7 +55,7 @@ const updateCurso = async (req, res) => {
     }
 };
 
-const deleteCurso = async (req, res) => {
+const changeStatusCurso = async (req, res) => {
     try {
         const { id } = req.params; // ID do curso que será excluído
 
@@ -65,11 +65,12 @@ const deleteCurso = async (req, res) => {
             return res.status(404).json({ error: "Curso não encontrado." });
         }
 
-        // Excluir o curso
-        await curso.destroy();
+        // Arquivar o curso
+        const cursoStatus = !curso.Status
+        await curso.update({ Status: cursoStatus });
 
         // Retorna uma mensagem de sucesso
-        res.json({ message: "Curso excluído com sucesso!" });
+        res.json({ message: "Curso alterado com sucesso!" });
     } catch (error) {
         console.error("Erro ao excluir curso: ", error);
         res.status(500).json({ error: "Erro ao excluir curso." });
@@ -99,6 +100,6 @@ module.exports = {
     createCurso,
     readCurso,
     updateCurso,
-    deleteCurso,
+    changeStatusCurso,
     readUniCurso
 };
