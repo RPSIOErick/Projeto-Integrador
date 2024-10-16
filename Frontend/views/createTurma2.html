@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Disciplina</title>
+
+    <!--Importação do Bootstrap-->
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+            crossorigin="anonymous"
+        >
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous">
+        </script>
+    <!--Fim da Importação do Bootstrap-->
+
+    <!--Importação IonIcons-->
+        <script 
+            type="module" 
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+        </script>
+        <script 
+            nomodule 
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+        </script>
+    <!--Fim da Importação IonIcons-->
+
+    <!--CSSs-->
+        <link rel="stylesheet" href="../public/css/global.css">
+        <link rel="stylesheet" href="../public/css/createTurma.css">
+    <!--Fim dos CSSs-->
+
+</head>
+<body>
+    <!-- Navbar -->        
+        <nav class="navbar fixed-top navbar-custom">
+            <div class="container-fluid">
+
+                <!-- icon menu -->
+                <button class="navbar-toggler iconMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Título -->
+                <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteDesktop" href="#">
+                    SGTF - Sistema de Gerenciamento de Trabalhos Finais
+                </a>
+
+                <!-- Título (versão mobile) -->
+                <a class="navbar-brand position-absolute top-50 start-50 translate-middle titleSiteMobile" href="#">
+                    SGTF
+                </a>
+
+                <!-- funções de aumento/redução de font -->
+                <div class="d-flex align-items-center ms-auto d-fonte-ajuste d-none d-md-block">
+                    <!-- Links A+ e A- -->
+                    <div class="d-flex align-items-center me-5 text-white">
+                        <a class="navbar-brand">A+</a>
+                        <a class="navbar-brand">A-</a>
+                    </div>
+                </div>
+
+                <!-- Ícone de perfil -->
+                <a href="#">
+                    <ion-icon name="person-circle-outline" class="icon-profile"></ion-icon>                        
+                </a>
+
+                <!-- menu -->
+                <div class="offcanvas-end offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                    <!-- header -->
+                    <div class="offcanvas-header text-white">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SGTF</h5>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                
+                    <!-- body -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Professor</a>
+                            </li>   
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../views/indexTurma.html">Turma</a>
+                            </li>                                    
+                        </ul>                  
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <!-- (fim) navbar -->
+
+    <!--Botão Voltar-->
+        <a href="/views/indexTurma.html" class="btn-voltar">
+            <img src="../public/img/icons/icon_return.png" alt="Botão voltar">
+        </a>
+    <!--Fim do Botão Voltar-->   
+
+    <!--Titulo Principal-->
+        <h1 class="page-title">Criar Turma</h1>
+
+        <div class="row row-main">
+
+            <p class="text-center">Confirme a lista de alunos</p>
+
+            <!-- Search -->
+                <div class="input-group mb-3 p-4">
+                    <input type="text" class="form-control" placeholder="Buscar por RM" aria-label="Buscar por RM" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div>
+                </div>
+
+            <!-- Parte: Lista contatos -->
+            <center>
+                <div class="col-md-6 g-3 bg-light shadow">
+
+                    <div class="row d-flex">
+                        
+                        <!-- contatos alunos-->
+                            <div class="lista-body">
+                                <ul class="list-group">
+
+                                    <!-- Contato 1 -->
+                                        <li class="list-group-item border">
+                                            <div class="col d-flex align-items-center col-aluno">
+                                                <ion-icon name="person-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+                                                
+                                                <span class="nomeAluno">Ana Silva Barbosa</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute bottom end-0 span-svg-eye" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                                </svg>
+                                            
+                                            </div>
+                                        </li>
+                                    <!-- (fim) Contato 1 -->
+
+                                    <!-- Contato 2 -->
+                                        <li class="list-group-item border">
+                                            <div class="col d-flex align-items-center col-aluno">
+                                                <ion-icon name="person-circle-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+                                                
+                                                <span class="nomeAluno">Bruno Santos Silva</span>
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute bottom end-0 span-svg-eye" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                                </svg>
+                                            
+                                            </div>
+                                        </li>
+                                    <!-- (fim) Contato 2 -->
+                                </ul>
+                            </div>
+                        <!-- (fim) contatos alunos -->
+                    </div>
+                </div>     
+            </center>
+        <!-- (fim) Parte: Lista contatos -->
+
+        <!-- button cadastrar aluno - MOBILE -->
+           <div class="d-grid col-6 mx-auto col-btn-cadastrar-mobile">
+            <button class="btn btn-primary" type="button">Adicionar Aluno</button>
+        </div>
+    <!-- button cadastrar aluno - MOBILE -->
+
+    <!-- buttons etapa anterior e confirmar -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center div-buttons">
+            <a href="../views/createTurma.html">
+                <button class="btn btn-primary me-md-2" type="button">Etapa Anterior</button>
+            </a>
+            <button class="btn btn-primary btn-confirmar" type="button">Confirmar</button>
+        </div>
+    <!-- buttons etapa anterior e confirmar -->
+
+        </div>
+        
+
+
+
+    <!--JS-->
+        <script src="../public/js/multiform-use.js"></script>
+
+</body>
+</html>

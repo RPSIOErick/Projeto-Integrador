@@ -1,0 +1,77 @@
+.row-main{
+    padding: 2vh;
+    padding-left: 3.5vh!important;
+}
+
+/* Search */
+    .input-group-append button{
+        background-color: var(--color-1);
+        color: var(--color-3);
+    }
+
+/* Lista Alunos */
+
+    .list-group-item{
+        margin-bottom: 2vh;
+    }
+
+    .col-aluno ion-icon{
+        font-size: 4vh;
+    }
+
+    .nomeAluno{
+        font-size: 1rem;
+    }
+
+    .list-group{
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-7);
+        padding: 1vh;
+    }
+
+    .span-svg-eye{
+        width: 2vh;
+        margin-right: 2.2vh;
+    }
+
+/* Parte: Buttons */ 
+    .col-btn-cadastrar-mobile {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4vh;
+    }
+
+    .col-btn-cadastrar-mobile button{
+        display: block;
+        width: auto;
+        height: 5.5vh;
+        border-radius: 2vh;
+        font-size: 2.3vh;
+        border: 0;
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+
+        background-color: var(--color-1);
+    }
+
+    .div-buttons {
+        display: flex !important; 
+        justify-content: center; 
+        gap: 3vw!important;
+    }
+
+    .div-buttons button{
+        width: auto;          
+        border-radius: 2vh;
+        font-size: 2.3vh;
+
+        background-color: var(--color-1);
+        border: 0;
+    }
+
+    .div-buttons button:focus, .col-btn-cadastrar-mobile button:focus{
+        background-color: var(--color-1)!important;
+        border: 0;
+    }

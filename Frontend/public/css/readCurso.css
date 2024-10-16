@@ -1,0 +1,60 @@
+
+/* Remoção da lista padrão */
+#classes-list {
+    /* Estilo de lista padrão removido */
+    list-style: none;
+    
+    /* Espaçamento interno da lista */
+    padding: 1rem; 
+}
+
+/* Estilização dos itens da lista */
+.card-item {
+    /* Cor de fundo original */
+    background-color: #e5e5e5; 
+    
+    /* Bordas arredondadas */
+    border-radius: 0.5rem; 
+    
+    /* Espaço entre os itens */
+    margin: 0.625rem 0; 
+    
+    /* Espaçamento interno */
+    padding: 0.9375rem; 
+    
+    /* Alinhamento flexível */
+    display: flex; 
+    
+    /* Espaçamento entre os elementos */
+    justify-content: space-between; 
+    
+    /* Alinhamento vertical */
+    align-items: center; 
+}
+
+/* Estilo para os botões dentro do card-item */
+.card-item button {
+    /* Espaçamento interno do botão */
+    padding: 0.5rem; 
+    
+    /* Bordas arredondadas */
+    border-radius: 1.5rem; 
+    
+    /* Cor de fundo do botão */
+    background-color: #333; 
+    
+    /* Cor do texto */
+    color: white; 
+    
+    /* Removendo a borda padrão */
+    border: none; 
+    
+    /* Cursor ao passar o mouse */
+    cursor: pointer; 
+}
+
+/* Estilo do botão ao passar o mouse */
+.card-item button:hover {
+    /* Mudança de cor de fundo ao passar o mouse */
+    background-color: #555; 
+}

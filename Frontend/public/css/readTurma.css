@@ -1,0 +1,154 @@
+/* icon eye */
+
+.eye-icon{
+    width: 3vh;
+    cursor: pointer;
+    position: absolute;
+    right: 1vw;
+    top: 0.7vh;
+    border: 0;
+    background: none;
+}
+
+.chevron {
+    transition: transform 0.3s ease; 
+}
+
+.rotate {
+    transform: rotate(180deg); 
+}
+
+.collapse-content {
+    display: none;
+}
+
+.collapse-button p{
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    margin-bottom: -1vh;
+    font-weight: 500;
+}
+
+.show {
+    display: block;
+}
+
+.collapse-icon {
+transition: transform 0.3s ease;
+}
+
+a[aria-expanded="true"] .collapse-icon {
+transform: rotate(180deg);
+}
+
+
+/* fim icon eye */
+
+.input-group-append button{
+background-color: var(--color-1);
+color: var(--color-3);
+}
+
+.item-disciplina {
+/*Background*/
+background-color: var(--color-7);
+
+/* Size */
+height: 15vh; 
+
+display: flex;
+flex-direction: column;
+
+/* Border */
+border: 1px solid #ccc;
+
+/* Position */
+position: relative; 
+
+/*Border*/
+border-radius: 0.5em;
+box-shadow: 0.1em 0.15em 0.5em rgba(0, 0, 0, 0.5);
+
+/* Margin */
+margin: 2vh 1.7vh;
+margin-top: 0!important;
+
+/*Padding*/
+padding-top: 0.72em;
+padding-bottom: 0.72em;
+padding-left: 0.8em;
+padding-right: 0.8em;
+}
+
+/*Id Disciplina*/
+.item-disciplina span
+{
+/*Font*/
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-left: 3vw;
+    font-size: 2.3vh;
+}
+
+/*Titulo Disciplina*/
+.item-disciplina p
+{
+/*Font*/
+    margin-bottom: 0;
+
+/*Padding*/
+    padding-left: 0.5em;
+}
+
+/*Botões de Ação*/
+
+.btns-disciplina {
+background-color: var(--color-1);
+position: absolute;
+right: 10px; /* Alinha à direita */
+bottom: 10px; /* Posiciona na parte inferior */
+display: flex;
+gap: 10px; /* Espaço entre os botões */
+
+/*Border*/
+    border-radius: 0.4em;
+    border-width: 0.08em;
+    border-style: solid;
+    border-color: black;
+}
+
+.btns-disciplina a
+{
+/*Text*/
+    color: white;
+    text-decoration: none;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    border: none;
+
+/*Padding*/
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.2em;
+    padding-right: 0.8em;
+}
+
+.btn-editar, .btn-excluir
+{
+/*Text*/
+    color: white;
+    font-size: 0.6em;       
+    text-transform: uppercase;
+    
+/*Background*/
+    background-color: transparent;
+
+/*Border*/
+    border-left: 0.1em solid black;
+
+/*Padding*/
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.8em;
+    padding-right: 1.2em;
+}
+/*Fim dos Botões de Ação*/

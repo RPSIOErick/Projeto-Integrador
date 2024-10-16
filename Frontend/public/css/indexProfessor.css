@@ -1,0 +1,7 @@
+/* Responsividade Mobile */
+@media screen and (orientation: portrait)
+{
+    .row-error p{
+        font-size: 1.2rem;
+    }
+}

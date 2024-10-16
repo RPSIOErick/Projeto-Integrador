@@ -1,0 +1,124 @@
+/* Div Informações Gerais */
+    /*Titulo interno*/
+        .title-createAluno
+        {
+            /*Text*/     
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+
+            /*Position*/
+                margin-top: 1em;
+                margin-bottom: 1em;
+        }
+
+    /* buttons editar e excluir */
+        .fixed-buttons {
+            position: fixed;
+            bottom: 20px; /* Distância do fundo da página */
+            right: 20px; /* Distância da direita da página */
+            display: flex;
+            gap: 10px; /* Espaço entre os botões */
+        
+        }
+
+        .fixed-buttons .btn {
+        
+            fill: antiquewhite;
+            color: white;
+            padding: 1vh 2vh; 
+            border-radius: 1vh;
+            cursor: pointer;
+            background-color: var(--color-1);   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .fixed-buttons .btn ion-icon{
+            font-size: 4vh;
+        }
+
+        /* modal */
+
+            .modal-content{
+                height: 50vh!important;
+                padding: 1vh;
+                border-radius: 3vh;
+                border: 0.2vh solid #000000;
+            }
+
+            .modal{
+                --bs-modal-width: 70%;
+            }
+
+            .modal-header{
+                height: 12%;
+            }
+
+            .modal-header h1{
+                font-size: 2vh;
+            }
+
+            .modal-header button{
+                font-size: 2vh;
+            }
+
+            .modal-body{
+                padding: 2vh!important;
+            }
+
+            .modal-body p{
+                font-size: 2.2vh;
+                margin-bottom: 3vh!important;
+            }
+
+            .fw-bold{
+                font-size: 2.5vh;
+            }
+
+            .modal-footer button{
+                width: 15vh;
+                padding: 1vh;
+                font-size: 1.8vh;
+                border-radius: 3vh;
+            }
+
+        /* (fim) modal */
+
+/* (fim) Div Informações Gerais */
+
+/* Div Alunos Matriculados */
+
+    /* Search */
+        .input-group-append button{
+            background-color: var(--color-1);
+            color: var(--color-3);
+        }
+
+    /* Lista Alunos */
+
+        .list-group-item{
+            margin-bottom: 2vh;
+        }
+
+        .col-aluno ion-icon{
+            font-size: 4vh;
+        }
+
+        .nomeAluno{
+            font-size: 1rem;
+        }
+
+        .list-group{
+            display: flex;
+            justify-content: center;
+            background-color: var(--color-7);
+            padding: 1vh;
+        }
+
+        .span-svg-eye{
+            width: 2vh;
+            margin-right: 2.2vh;
+        }
+/* (fim) Div Alunos Matriculados */

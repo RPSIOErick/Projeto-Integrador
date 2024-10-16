@@ -1,0 +1,99 @@
+
+.div-dataAluno
+{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+/*Foto de Perfil*/
+
+    /*Posição*/
+        .profile-picture-myaccount
+        {
+            /*Position*/
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+
+            /*Size*/
+                width: fit-content;
+        }
+
+    /*Imagem de Perfil*/
+        .profile-picture-myaccount img
+        {
+            /*Size*/
+                width: 9.51em;
+                height: 9.51em;
+        }
+
+    /*Botão Editar Foto de Perfil*/
+        .profile-picture-myaccount-btnUpdatePic
+        {
+            /*Background*/
+                background-color: var(--color-base);
+
+            /*Size*/
+                width: fit-content;
+                height: fit-content;
+
+            /*Border*/
+                border-radius: 5em;
+
+            /*Padding*/
+                padding-left: 0.37em;
+                padding-right: 0.37em;
+                padding-top: 0.2em;
+                padding-bottom: 0.2em;
+
+            /*Position*/
+                position: absolute;
+                bottom: 0;
+                right: 0;
+        }
+
+    /*Icone do Botão Foto de Perfil*/
+        .profile-picture-myaccount-btnUpdatePicIcon
+        {
+            /*Size*/
+                width: 1.75em;
+                height: 1.75em;
+        }
+/*Fim da Foto de Perfil*/
+
+/*Nome do Aluno (P apenas para mostrar)*/
+    .name_aluno_p
+    {
+        /*Text*/
+            text-align: center;
+            font-size: 1.41rem;
+
+        /*Position*/
+            margin-top: 1em;
+            margin-bottom: 1em;
+    }
+
+/*Inputs Formulario*/
+    .input-dataAluno
+    {
+    }
+    .input-dataAluno input
+    {
+        /*Background*/
+            background-color: var(--color-3);
+
+        /*Size*/
+            width: 100%;
+
+        /*Border*/
+            border-radius: 0.5em;
+
+        /*Padding*/
+            padding-top: 0.48em;
+            padding-bottom: 0.48em;
+            padding-left: 1em;
+            padding-right: 1em;
+
+        /*Position*/
+            margin-bottom: 1em;
+    }

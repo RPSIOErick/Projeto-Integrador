@@ -1,0 +1,66 @@
+/*Titulo interno*/
+    .title-createAluno
+    {
+        /*Text*/     
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+
+        /*Position*/
+            margin-top: 1em;
+            margin-bottom: 1em;
+    }
+
+    /*Importar Aluno*/
+
+        /*Texto Importar Arquivo*/
+            .explicacao-importacao
+            {
+                /*Text*/
+                    text-align: center;
+
+                /*Padding*/
+                    padding-left: 1em;
+                    padding-right: 1em;
+            }
+
+        /*Link SIGA*/
+            .explicacao-importacao a
+            {
+                /*Text*/
+                    text-decoration: none;
+                    color: var(--color-4);
+            }
+
+        /*Botão Arquivo*/
+            .file_aluno-design
+            {
+                /*Background*/
+                    background-color: var(--color-3);
+
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+            }
+
+        /*Icone do Botão Arquivo*/
+            .file_aluno-icon
+            {
+                /*Text*/
+                    font-size: 1.7em;
+
+                /*Padding*/
+                    padding: 0.78em;
+            }
+
+        /*Input Aluno*/
+            #file_aluno
+            {
+                /*Display*/
+                    display: none;
+            }
+
+
+        /*Fim do Importar Aluno*/
+
+        
